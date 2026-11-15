@@ -1,0 +1,7 @@
+{
+  "key.modularhud.open_config": "Open HUD Settings",
+  "key.modularhud.toggle_sound": "Toggle Sound Detector",
+  "key.modularhud.toggle_esp": "Toggle Block/Entity ESP",
+  "key.category.modularhud.main": "Donut HUD",
+  "modularhud.config.title": "Donut HUD"
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "modularhud",
+  "version": "${version}",
+  "name": "Donut HUD",
+  "description": "Themed client-side HUD (FPS, coords, ping, CPS, armor, keystrokes) a sound detector, and block/entity ESP with wireframe outlines, all in a black UI.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["modularhud.ModularHudClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
