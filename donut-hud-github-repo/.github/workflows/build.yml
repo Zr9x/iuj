@@ -16,9 +16,14 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 9.2.1
+      - name: Find project folder
+        id: find
+        run: |
+          ls -R | head -40
+          echo "dir=$(dirname "$(find . -name settings.gradle -not -path './.git/*' | head -n1)")" >> "$GITHUB_OUTPUT"
       - run: gradle build --no-daemon
-        working-directory: donut-hud-github-repo
+        working-directory: ${{ steps.find.outputs.dir }}
       - uses: actions/upload-artifact@v4
         with:
           name: donut-hud-jar
-          path: donut-hud-github-repo/build/libs/*.jar
+          path: ${{ steps.find.outputs.dir }}/build/libs/*.jar
